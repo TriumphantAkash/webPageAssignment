@@ -1,0 +1,49 @@
+body {
+	font-family:Verdana,sans-serif;
+	font-size:0.8em;
+	display: block;
+}
+
+header,footer,section,article {
+	border:1px solid grey;
+	margin:5px;
+	margin-bottom:15px;
+	padding:8px;
+	background-color:white;
+}
+
+header,footer {
+	color:white;
+	background-color:rgb(192, 192, 192);
+	margin-bottom:5px;
+}
+
+section {
+	background-color:#ddd;
+}
+
+nav ul  {
+	margin:0;
+	padding:0;
+}
+
+nav ul li {
+	display:inline; 
+	margin:5px;
+}
+
+footer {
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+aside {
+	position: fixed;
+	width: 50%;
+}
+
+tabHeading {
+	position: fixed;
+	width: 20%;
+}
