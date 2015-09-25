@@ -37,7 +37,7 @@
 	</footer>
 
 	<nav id="horzNav">
-	<a href="http://www.facebook.com">HTML</a> |
+	<a href="http://www.utdallas.edu">UTD</a> |
 	<a href="http://www.facebook.com">CSS</a> |
 	<a href="http://www.facebook.com">Javascript</a> |
 	<a href="http://www.facebook.com">Jquery</a>
@@ -78,6 +78,29 @@
 			</article>
 		</section>
 	</main>
+
+	<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Show My Location</button>
+
+<p id="xyz"></p>
+
+<script>
+var x = document.getElementById("xyz");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;	
+}
+</script>
 </body>
 
 </html>
