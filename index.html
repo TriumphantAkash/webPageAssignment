@@ -141,14 +141,26 @@ ondragstart="drag(event)" width="336" height="69">
 
 // Check browser support
 function storageAPIDemo(){
-	if (typeof(Storage) !== "undefined") {
-		// Store
-		localStorage.setItem("lastname", "Chaturvedi");
-		// Retrieve
-		document.getElementById("result").innerHTML = localStorage.getItem("lastname");
-	} else {
-    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
-	}
+	// if (typeof(Storage) !== "undefined") {
+	// 	// Store
+	// 	localStorage.setItem("lastname", "Chaturvedi");
+	// 	// Retrieve
+	// 	document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+	// } else {
+ //    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+	// }
+
+	 if(typeof(Storage) !== "undefined") {
+        if (sessionStorage.clickcount) {
+            sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+        } else {
+            sessionStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "You have visited this page " + sessionStorage.clickcount + " time(s) in this session.";
+    } else {
+
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
 }
 </script>
 <section>
