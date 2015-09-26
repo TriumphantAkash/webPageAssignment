@@ -32,21 +32,7 @@ function drop(ev) {
 <body>
 	<header>
 		
-<!-- 		<tabHeading>Home</tabHeading>
-		<tabHeading>Education</tabHeading>
-		<tabHeading>Resume</tabHeading>
-		<tabHeading>Skillset</tabHeading> -->
-		<h1>Akash</h1>
-
-		
-<!-- 		<aside>
-			<h1>Home</h1>
-		</aside>
-		
-		<aside>
-			<h1>Chaturvedi</h1>
-		</aside> -->
-		
+		<h1>Akash Chaturvedi</h1>
 	</header>
 	<footer>
 		<p>&copy; Akash Chaturvedi (akash@linux.com).</p>
@@ -54,52 +40,71 @@ function drop(ev) {
 
 	<nav id="horzNav">
 	<a href="http://www.utdallas.edu">UTD</a> |
-	<a href="http://www.facebook.com">CSS</a> |
-	<a href="http://www.facebook.com">Javascript</a> |
-	<a href="http://www.facebook.com">Jquery</a>
+	<a href="http://cs.utdallas.edu/">UTD Computer Science Department</a> |
+	<a href="http://jindal.utdallas.edu/">UTD Management School</a>
 	</nav>
 
 	<main id="content">
-		<section id="tabs">
 		
-				<h2>profile</h2>
-			</aside>
-
-
-			<aside id="education">
-				<h2>education</h2>
-			</aside>
-
-
-			<aside id="work experience">
-				<h2>experience</h2>
-			</aside>
-
-
-			<aside id="skills">
-				<h2>skills</h2>
-			</aside>
-
-		</section>
-
 		<section>
-			<h2>Fun Fact</h2>
-			<article> 
-				<h3>article 1 heading</h3>
-				<p>This is a random article I am creating for the story, I want to do random stuff here to demonstrate how the article and aside(basically HTML5 stuff works)</p>
+                
+<img id="img" src="dp.jpg" width="250" height="350">
+			<h2 class="h1">Hope you won't regret scrolling down!!!!! </h2>
+			<article class="h1"> 
+				<h3>Who am I???</h3>
+				<p>Have you heard of Taj Mahal???? Ofcourse You must have.... After all its one of the Wonders of the world... And I
+					belong to the City where this monument belongs to.... Namely Agra (India)... Talking about myself, I am a 
+				    CS Graduate Student from University of Texas at Dallas with 4 Years of Professional Experience in the field 
+				    of Software Development, Android Programming, Networking Domain... stop stop stop!!!!! R u bored :( .</p>
 			</article>
 
-			<article>
-				<h3>article 2 heading</h3>
+			<article class="h1">
+				<h3>What I do??</h3>
+				<ol>
+				<li>Linux Foundation© certified System Administrator, Computer Science Graduate student at University of Texas at Dallas.</li>
+				<li> With more than 7 years of programming experience in academic and professional projects including 3 years of professional experience in Linux kernel development for embedded devices based on ARM/MIPS architecture and Application Software Development in Java/JSP/JSF/Servlets using MVC architecture. </li>
+       <li>Check out some of my academic and hobby projects at: <a href="http://www.github.com/TriumphantAkash"> Github(AKash) </a>
+       </li> 
+  <li>Worked within Visual Display debugging Tools Development Team at Samsung R&D Institute, Delhi. Here, I worked on the development of user and kernel space debugging tools and porting these tools on target platforms based on ARM and MIPS architecture.</li>
+<li>Additionally, I have developed a couple of banking applications using Java/JSP/JSF/Servlets while working for Polaris Financial Technology Ltd.</li>
+</ol>
 			</article>
 		</section>
+<table>
+	<tr>
+		<td>
+  <dl id="lang">
+
+  <dt> <b>Languages</b> </dt> </td> <td><dd> C </dd> <dd> C++ (STL, Boost, OpenGL)</dd><dd> Java</dd> <dd> Perl</dd><dd> Shell script</dd> <dd> HTML</dd> <dd> CSS</dd> <dd> JavaScript</dd> <dd> MIPS assembly</dd> <dd> ARM assembly</dd> <dd>Device Drivers</dd> <dd> Linux kernel Programming</dd></dl><br> <br></td>
+  <td>
+  <dl id="tools">
+  	<dt>
+  <b> Tools </b></td> <td></dt> <dd> GDB </dd> <dd>Make </dd> <dd> oprofile</dd> <dd> ARM Streamline</dd> <dd> QEMU</dd> <dd> Xen</dd> <dd> Git</dd> <dd>Perforce</dd> <dd> Prevent</dd> <dd>Coverity</dd> <dd>Rhapsody</dd> <dd> cscope </dd></dl><br><br></td>
+
+
+   <td>
+<dl id="ide">
+
+	<dt><b>
+IDE/Editor </b></dt> </td> <td><dd> Eclipse</dd> <dd> Visual Studio</dd> <dd>  Vim</dd> <dd> MARS</dd>
+</dl><br><br></td>
+
+<td>
+<dl id="arch">
+	<dt><b>
+Architecture</b> </dt></td> <td> <dd> ARM</dd> <dd>MIPS</dd>
+</dl><br><br></td></tr>
+
+</table>
+
+
 	</main>
 
 	<p>Click the button to get your coordinates.</p>
 
 <button onclick="getLocation()">Show My Location</button>
 
-<p id="xyz"></p>
+<p id="xyz">Location coodrnates placeholder</p>
 
 <script>
 var x = document.getElementById("xyz");
@@ -117,11 +122,99 @@ function showPosition(position) {
     "<br>Longitude: " + position.coords.longitude;	
 }
 </script>
-
+<article>
+<section>
+	<h2>You can drag the Github image and drop it into the box!</h2>
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
 <img id="drag1" src="github-logo.png" draggable="true"
 ondragstart="drag(event)" width="336" height="69">
+
+
+
+<p id="result"></p>
+<button onclick="storageAPIDemo()">storage API Demo</button>
+</article>
+</section>
+<script>
+
+
+// Check browser support
+function storageAPIDemo(){
+	if (typeof(Storage) !== "undefined") {
+		// Store
+		localStorage.setItem("lastname", "Chaturvedi");
+		// Retrieve
+		document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+	} else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+	}
+}
+</script>
+<section>
+	<h2>The University of Texas at Dallas</h2>
+
+<article>
+<figure>
+<figcaption> UTD </figcaption>
+
+<img id="myimage" src = "utd_image.jpg"  usemap="#detailedmap" </img>
+
+<map name="detailedmap">
+    <area shape="rect" coords="39, 241, 232, 355" href = "library.html"/>
+    <area shape="rect" coords="296, 25, 505, 362" href = "activity_center.html" />
+    <area shape="rect" coords="12, 14, 212, 179" href = "erik_johnson.html"/>
+</map>
+
+
+
+</figure>
+
+<div id = "turnRed">
+<h3>You can navigate to UTD's different buildings page based on the image part clicked</h3>
+<ul>
+	<li> Eugene McDermott Library </li>
+	<li> UT Dallas Activity center </li>
+	<li> Erik Jonsson school of Engineering and Computer Science </li>
+</ul>
+</div>
+
+
+</article>
+</section>
+
+<p class="headings"> The following table lists the department and their location </p>
+<div id = "mytablecolor">
+<table id="mytable" >
+<tr class = "tablerow"> 
+<th class ="tabledata"> S.No </th>
+<th class ="tabledata"> Department </th>
+<th> Location </th>
+</tr>
+<tr>
+<td> 1 </td>
+<td> Computer Science </td>
+<td> Erik Johnson School Of Engineering </td>
+</tr>
+<tr>
+<td> 2 </td>
+<td> Electrical & Electronics </td>
+<td> Erik Johnson School Of Engineering </td>
+</tr>
+<tr>
+<td> 3</td>
+<td> Information Technology & Management  </td>
+<td> Naveen Jindal School Of Management </td>
+</tr>
+</table>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
 
 </body>
 

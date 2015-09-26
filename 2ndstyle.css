@@ -1,0 +1,76 @@
+body#formpage{
+//background-color: lightblue;
+background-color:rgb(210, 105, 30);
+
+}
+body#indexpage{
+//background-color:cyan;
+}
+ header#myheader{ 
+color: red;
+font-size:125%;
+}
+table td,th{
+border: 2px solid black;
+background-color:yellow;
+}
+td{
+padding: 15px;
+}
+ul{
+list-style-type: square;
+font-family:times new roman;
+}
+#myimage{
+height:200px;
+width:200px;
+}
+p{
+color:black;
+font-family:Times New Roman}
+p.utd_details{
+color:black;
+font-family:Times New Roman;
+}
+p#utd_details_more{
+color:red;
+font-family:courier;
+}
+p.bullets{
+font-weight:900;
+font-size:150%;
+color:black;
+}
+p.headings{
+font-weight:900;
+font-size:125%;
+color:blue;
+}
+#definition_list{
+font-weigh:bold;
+color:black;
+}
+p.questions{
+font-weight:800;
+font-size:125%;
+}
+dt{
+font-weight:900;
+text-decoration:underline;
+}
+dd{
+margin:0;
+}
+form{
+width:450px;
+height:700px;
+}
+#myBox
+{
+float:right;
+position:absolute;
+width:250px;
+height:250px;
+padding:12px;
+border:2px solid #aaaaaa;
+}
