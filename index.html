@@ -1,223 +1,277 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<meta name="description" content="a sample portfolio web page"/>
-	<meta name="author" content="Akash Chaturvedi"/>
-	<meta name="course" content="CS6314 (Web Programming Languages)"/>
-	<meta name="course instructor" content="Mithun Balakrishna"/>
-	<meta name="keywords" content="HTML5, CSS">
-	<meta name="robots" content="index, follow"/>
+    <meta name="description" content="a sample portfolio web page"/>
+    <meta name="author" content="Akash Chaturvedi"/>
+    <meta name="course" content="CS6314 (Web Programming Languages)"/>
+    <meta name="course instructor" content="Mithun Balakrishna"/>
+    <meta name="keywords" content="HTML5, CSS">
+    <meta name="robots" content="index, follow"/>
 
-	<script>
-		function allowDrop(ev) {
-    ev.preventDefault();
-}
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
 
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-}
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
 
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-}
-	</script>
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
 
-	<link rel="stylesheet" type="text/css" href="firststyle.css">
+    <link rel="stylesheet" type="text/css" href="firststyle.css">
 
-	<title> portfolio </title>
+    <title> portfolio </title>
 </head>
 
 <body>
-	<header>
-		
-		<h1>Akash Chaturvedi</h1>
-	</header>
-	<footer>
-		<p>&copy; Akash Chaturvedi (akash@linux.com).</p>
-	</footer>
+<header>
 
-	<nav id="horzNav">
-	<a href="http://www.utdallas.edu">UTD</a> |
-	<a href="http://cs.utdallas.edu/">UTD Computer Science Department</a> |
-	<a href="http://jindal.utdallas.edu/">UTD Management School</a>
-	</nav>
+    <h1>Akash Chaturvedi</h1>
+</header>
+<footer>
+    <p>&copy; Akash Chaturvedi (akash@linux.com).</p>
+</footer>
 
-	<main id="content">
-		
-		<section>
-                
-<img id="img" src="dp.jpg" width="250" height="350">
-			<h2 class="h1">You have reached to Akash's porfolio</h2>
-			<article class="h1"> 
-				<h3>Who I am!</h3>
-				<p>Linux Foundation© certified System Administrator, Computer Science Graduate student at University of Texas at Dallas. With more than 7 years of programming experience in academic and professional projects including 3 years of professional experience in Linux kernel development for embedded devices based on ARM/MIPS architecture and Application Software Development in Java/JSP/JSF/Servlets using MVC architecture. .</p>
-			</article>
+<nav id="horzNav">
+    <a href="http://www.utdallas.edu">UTD</a> |
+    <a href="http://cs.utdallas.edu/">UTD Computer Science Department</a> |
+    <a href="http://jindal.utdallas.edu/">UTD Management School</a>
+</nav>
 
-			<article class="h1">
-				<h3>What I do!</h3>
-				<ol>
-				<li> With more than 7 years of programming experience in academic and professional projects including 3 years of professional experience in Linux kernel development for embedded devices based on ARM/MIPS architecture and Application Software Development in Java/JSP/JSF/Servlets using MVC architecture. </li>
-       <li>Check out some of my academic and hobby projects at: <a href="http://www.github.com/TriumphantAkash"> Github(AKash) </a>
-       </li> 
-  <li>Worked within Visual Display debugging Tools Development Team at Samsung R&D Institute, Delhi. Here, I worked on the development of user and kernel space debugging tools and porting these tools on target platforms based on ARM and MIPS architecture.</li>
-<li>Additionally, I have developed a couple of banking applications using Java/JSP/JSF/Servlets while working for Polaris Financial Technology Ltd.</li>
-</ol>
-			</article>
-		</section>
-<table>
-	<tr>
-		<td>
-  <dl id="lang">
+<main id="content">
 
-  <dt> <b>Languages</b> </dt> </td> <td><dd> C </dd> <dd> C++ (STL, Boost, OpenGL)</dd><dd> Java</dd> <dd> Perl</dd><dd> Shell script</dd> <dd> HTML</dd> <dd> CSS</dd> <dd> JavaScript</dd> <dd> MIPS assembly</dd> <dd> ARM assembly</dd> <dd>Device Drivers</dd> <dd> Linux kernel Programming</dd></dl><br> <br></td>
-  <td>
-  <dl id="tools">
-  	<dt>
-  <b> Tools </b></td> <td></dt> <dd> GDB </dd> <dd>Make </dd> <dd> oprofile</dd> <dd> ARM Streamline</dd> <dd> QEMU</dd> <dd> Xen</dd> <dd> Git</dd> <dd>Perforce</dd> <dd> Prevent</dd> <dd>Coverity</dd> <dd>Rhapsody</dd> <dd> cscope </dd></dl><br><br></td>
+    <section>
+
+        <img id="img" src="dp.jpg" width="250" height="350">
+
+        <h2 class="h1">You have reached to Akash's porfolio</h2>
+        <article class="h1">
+            <h3>Who I am!</h3>
+
+            <p>Linux Foundation© certified System Administrator, Computer Science Graduate student at University of
+                Texas at Dallas. With more than 7 years of programming experience in academic and professional projects
+                including 3 years of professional experience in Linux kernel development for embedded devices based on
+                ARM/MIPS architecture and Application Software Development in Java/JSP/JSF/Servlets using MVC
+                architecture. </p>
+        </article>
+
+        <article class="h1">
+            <h3>What I do!</h3>
+            <ol>
+                <li>
+                    Desktop Application development
+                </li>
+                <li>
+                    Mobile and Web Application development
+                </li>
+                <li>
+                    Enjoy and play some awesome Music
+                </li>
+                <li>Additionally, I have developed a couple of banking applications using Java/JSP/JSF/Servlets while
+                    working for Polaris Financial Technology Ltd.
+                </li>
+            </ol>
+        </article>
+    </section>
+    <table>
+        <tr>
+            <td>
+                <dl id="lang">
+
+                    <dt><b>Languages</b></dt>
+            </td>
+            <td>
+                <dd> C</dd>
+                <dd> C++ (STL, Boost, OpenGL)</dd>
+                <dd> Java</dd>
+                <dd> Perl</dd>
+                <dd> Shell script</dd>
+                <dd> HTML</dd>
+                <dd> CSS</dd>
+                <dd> JavaScript</dd>
+                <dd> MIPS assembly</dd>
+                <dd> ARM assembly</dd>
+                <dd>Device Drivers</dd>
+                <dd> Linux kernel Programming</dd>
+                </dl><br> <br></td>
+            <td>
+                <dl id="tools">
+                    <dt>
+                        <b> Tools </b>
+            </td>
+            <td></dt>
+                <dd> GDB</dd>
+                <dd>Make</dd>
+                <dd> oprofile</dd>
+                <dd> ARM Streamline</dd>
+                <dd> QEMU</dd>
+                <dd> Xen</dd>
+                <dd> Git</dd>
+                <dd>Perforce</dd>
+                <dd> Prevent</dd>
+                <dd>Coverity</dd>
+                <dd>Rhapsody</dd>
+                <dd> cscope</dd>
+                </dl><br><br></td>
 
 
-   <td>
-<dl id="ide">
+            <td>
+                <dl id="ide">
 
-	<dt><b>
-IDE/Editor </b></dt> </td> <td><dd> Eclipse</dd> <dd> Visual Studio</dd> <dd>  Vim</dd> <dd> MARS</dd>
-</dl><br><br></td>
+                    <dt><b>
+                        IDE/Editor </b></dt>
+            </td>
+            <td>
+                <dd> Eclipse</dd>
+                <dd> Visual Studio</dd>
+                <dd> Vim</dd>
+                <dd> MARS</dd>
+                </dl><br><br></td>
 
-<td>
-<dl id="arch">
-	<dt><b>
-Architecture</b> </dt></td> <td> <dd> ARM</dd> <dd>MIPS</dd>
-</dl><br><br></td></tr>
+            <td>
+                <dl id="arch">
+                    <dt><b>
+                        Architecture</b></dt>
+            </td>
+            <td>
+                <dd> ARM</dd>
+                <dd>MIPS</dd>
+                </dl><br><br></td>
+        </tr>
 
-</table>
+    </table>
 
 
-	</main>
+</main>
 
-	<h2>check where I am!</h2>
+<h2>check where I am!</h2>
 
 <button onclick="getLocation()">Show My Location</button>
 
 <p id="xyz">Location coodrnates placeholder</p>
 
 <script>
-var x = document.getElementById("xyz");
+    var x = document.getElementById("xyz");
 
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else { 
-        x.innerHTML = "Geolocation is not supported by this browser.";
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
     }
-}
 
-function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude;	
-}
+    function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+    }
 </script>
 <article>
-<section>
-	<h2>You can drag the Github image and drop it into the box!</h2>
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <section>
+        <h2>You can drag the Github image and drop it into the box!</h2>
 
-<img id="drag1" src="github-logo.png" draggable="true"
-ondragstart="drag(event)" width="336" height="69">
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+        <img id="drag1" src="github-logo.png" draggable="true"
+             ondragstart="drag(event)" width="336" height="69">
 
 
-
-<p id="result"></p>
-<button onclick="storageAPIDemo()">storage API Demo</button>
+        <p id="result"></p>
+        <button onclick="storageAPIDemo()">storage API Demo</button>
 </article>
 </section>
 <script>
 
 
-// Check browser support
-function storageAPIDemo(){
-	// if (typeof(Storage) !== "undefined") {
-	// 	// Store
-	// 	localStorage.setItem("lastname", "Chaturvedi");
-	// 	// Retrieve
-	// 	document.getElementById("result").innerHTML = localStorage.getItem("lastname");
-	// } else {
- //    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
-	// }
+    // Check browser support
+    function storageAPIDemo() {
+        // if (typeof(Storage) !== "undefined") {
+        // 	// Store
+        // 	localStorage.setItem("lastname", "Chaturvedi");
+        // 	// Retrieve
+        // 	document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+        // } else {
+        //    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+        // }
 
-	 if(typeof(Storage) !== "undefined") {
-        if (sessionStorage.clickcount) {
-            sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+        if (typeof(Storage) !== "undefined") {
+            if (sessionStorage.clickcount) {
+                sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+            } else {
+                sessionStorage.clickcount = 1;
+            }
+            document.getElementById("result").innerHTML = "You have visited this page " + sessionStorage.clickcount + " time(s) in this session.";
         } else {
-            sessionStorage.clickcount = 1;
-        }
-        document.getElementById("result").innerHTML = "You have visited this page " + sessionStorage.clickcount + " time(s) in this session.";
-    } else {
 
-        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+            document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+        }
     }
-}
 </script>
 <section>
-	<h2>The University of Texas at Dallas</h2>
+    <h2>The University of Texas at Dallas</h2>
 
-<article>
-<figure>
-<figcaption> UTD </figcaption>
+    <article>
+        <figure>
+            <figcaption> UTD</figcaption>
 
-<img id="myimage" src = "utd_image.jpg"  usemap="#detailedmap" </img>
+            <img id="myimage" src="utd_image.jpg" usemap="#detailedmap" </img>
 
-<map name="detailedmap">
-    <area shape="rect" coords="39, 241, 232, 355" href = "library.html"/>
-    <area shape="rect" coords="296, 25, 505, 362" href = "activity_center.html" />
-    <area shape="rect" coords="12, 14, 212, 179" href = "erik_johnson.html"/>
-</map>
-
-
-
-</figure>
-
-<div id = "turnRed">
-<h3>You can navigate to UTD's different buildings page based on the image part clicked</h3>
-<ul>
-	<li> Eugene McDermott Library </li>
-	<li> UT Dallas Activity center </li>
-	<li> Erik Jonsson school of Engineering and Computer Science </li>
-</ul>
-</div>
+            <map name="detailedmap">
+                <area shape="rect" coords="39, 241, 232, 355" href="library.html"/>
+                <area shape="rect" coords="296, 25, 505, 362" href="activity_center.html"/>
+                <area shape="rect" coords="12, 14, 212, 179" href="erik_johnson.html"/>
+            </map>
 
 
-</article>
+        </figure>
+
+        <div id="turnRed">
+            <h3>You can navigate to UTD's different buildings page based on the image part clicked</h3>
+            <ul>
+                <li> Eugene McDermott Library</li>
+                <li> UT Dallas Activity center</li>
+                <li> Erik Jonsson school of Engineering and Computer Science</li>
+            </ul>
+        </div>
+
+
+    </article>
 </section>
 
 <p class="headings"> The following table lists the department and their location </p>
-<div id = "mytablecolor">
-<table id="mytable" >
-<tr class = "tablerow"> 
-<th class ="tabledata"> S.No </th>
-<th class ="tabledata"> Department </th>
-<th> Location </th>
-</tr>
-<tr>
-<td> 1 </td>
-<td> Computer Science </td>
-<td> Erik Johnson School Of Engineering </td>
-</tr>
-<tr>
-<td> 2 </td>
-<td> Electrical & Electronics </td>
-<td> Erik Johnson School Of Engineering </td>
-</tr>
-<tr>
-<td> 3</td>
-<td> Information Technology & Management  </td>
-<td> Naveen Jindal School Of Management </td>
-</tr>
-</table>
+
+<div id="mytablecolor">
+    <table id="mytable">
+        <tr class="tablerow">
+            <th class="tabledata"> S.No</th>
+            <th class="tabledata"> Department</th>
+            <th> Location</th>
+        </tr>
+        <tr>
+            <td> 1</td>
+            <td> Computer Science</td>
+            <td> Erik Johnson School Of Engineering</td>
+        </tr>
+        <tr>
+            <td> 2</td>
+            <td> Electrical & Electronics</td>
+            <td> Erik Johnson School Of Engineering</td>
+        </tr>
+        <tr>
+            <td> 3</td>
+            <td> Information Technology & Management</td>
+            <td> Naveen Jindal School Of Management</td>
+        </tr>
+    </table>
 </div>
 
-<a href ="form.html"> click here for a fun quiz</a> 
+<a href="form.html"> click here for a fun quiz</a>
 
 
 <br>

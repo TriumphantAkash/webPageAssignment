@@ -1,97 +1,103 @@
-html { height: 100%; }
-
-#img{
-     margin-top: 55px;
-	float: left;
+html {
+    height: 100%;
 }
 
-.h1{
-
-	margin-left: 260px;
+#img {
+    margin-top: 55px;
+    float: left;
 }
 
+.h1 {
+
+    margin-left: 260px;
+}
 
 body {
-	font-family:Verdana,sans-serif;
-	font-size:0.8em;
-	display: block;
+    font-family: Verdana, sans-serif;
+    font-size: 0.8em;
+    display: block;
 }
 
-header,footer,section,article {
-	border:1px solid grey;
-	margin:5px;
-	margin-bottom:15px;
-	padding:8px;
-	background-color:white;
+header, footer, section, article {
+    border: 1px solid grey;
+    margin: 5px;
+    margin-bottom: 15px;
+    padding: 8px;
+    background-color: white;
 }
 
-header,footer {
-	color:white;
-	background-color:rgb(192, 192, 192);
-	margin-bottom:5px;
+header, footer {
+    color: white;
+    background-color: rgb(192, 192, 192);
+    margin-bottom: 5px;
 }
 
 section {
-	background-color:#ddd;
+    background-color: #ddd;
 }
 
-nav ul  {
-	margin:0;
-	padding:0;
+nav ul {
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-	display:inline; 
-	margin:5px;
+    display: inline;
+    margin: 5px;
 }
 
 footer {
-	position: fixed;
+    position: fixed;
     bottom: 0;
     width: 100%;
-    background-color:rgb(0, 102, 0);
+    background-color: rgb(0, 102, 0);
 }
 
 aside {
-	position: fixed;
-	width: 20%;
+    position: fixed;
+    width: 20%;
 }
 
 tabHeading {
-	position: fixed;
-	width: 20%;
+    position: fixed;
+    width: 20%;
 }
 
 header {
-	background-color:rgb(210, 105, 30);
-	background-image: url("utd.jpg") ;
-	background-repeat: no-repeat;
+    background-color: rgb(210, 105, 30);
+    background-image: url("utd.jpg");
+    background-repeat: no-repeat;
     background-position: right;
     background-size: contain;
 }
 
 #tabs {
-  //  margin-top: 66px;
-    //padding: 44px;
-   	height: 15px;
+/ / margin-top : 66 px;
+/ / padding : 44 px;
+    height: 15px;
     background-size: 100%;
-    //border-radius: 10px;
-    background-color:rgb(0, 102, 0);
-    font-family:Verdana,sans-serif;
-	font-size:0.8em;
-	color: white;
+/ / border-radius : 10 px;
+    background-color: rgb(0, 102, 0);
+    font-family: Verdana, sans-serif;
+    font-size: 0.8em;
+    color: white;
 }
 
-#div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
+#div1 {
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
 
 #profile {
-	
+
 }
 
 table, th, td {
     border: 1px solid black;
-	margin-left: 390px;
-	font-family:Verdana,sans-serif;
-    font-size:1.0em;
+    margin-left: 390px;
+    font-family: Verdana, sans-serif;
+    font-size: 1.0em;
 } 
 
