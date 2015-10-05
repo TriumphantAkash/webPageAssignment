@@ -1,0 +1,182 @@
+  body {
+      background-color: rgb(210, 105, 30);
+      font: 18px/160% "Times New Roman", Verdana, Arial;
+      margin: .5in;
+      text-align:justified;
+  }
+
+  h1{
+     text-align: center;
+  }
+
+  .name{
+      text-align: center;
+      margin-top: -20%;
+  }
+
+  .imagemaps{
+      margin-top: -17%;
+      text-align: right;
+      margin-right: 1in;
+  }
+
+
+
+   h2#hedu01{
+      margin-top: 0%;
+  }
+
+   table{
+      text-align:justified;
+      width:100%;
+  }
+
+
+   table, th, td {
+       border: 1px solid black;
+       border-collapse: collapse;
+  }
+
+
+   table#t01 th {
+      font: 20px/180% "Times New Roman", Verdana, Arial;
+      background-color: grey;
+      text-align:center;
+ }
+
+   th, td {
+      padding: 5px;
+      text-align: left;
+  }
+
+table#t02, table#t02 td{
+     border: 0px;
+}
+
+   table#t02 th {
+      border: 0px;
+      font: 20px/180% "Times New Roman", Verdana, Arial;
+      background-color: grey;
+      text-align:left;
+ }
+
+  td#tddate{
+	text-align:right;
+	}
+
+  table#t02 th#thdate{
+	text-align:right;
+	}
+
+
+   .pic{
+      margin-left:10%;
+  }
+
+   figcaption#figcap{
+	text-align:right;
+	margin-right:.2in;
+       }
+    
+	
+    div#div1 {
+	width:60px;height:60px;padding:10px;border:1px solid #aaaaaa;
+	}
+
+    div#fadebox
+	{
+	margin: 3px;
+	width: 50px;
+	height: 50px; 
+	background-color: blue;
+	}
+
+    div#assgn2
+	{
+	margin:1in;
+	}
+
+
+    p#ColorFadeEffect
+	{
+	font: 20px;
+	text-align: center;
+	color: green;
+	}
+
+   div#MouseScrollEvent
+	{
+	align:center;
+ 	background-color: Yellow;
+	width: 50px;
+	height: 50px;
+	}
+
+   .TextHideFade
+	{
+	text-align:center;
+	color: green;
+	}
+
+    div#box1
+	{
+	width:95px;
+	height:30px;
+	background-color:Orchid;
+	}
+
+    div#boxeffect
+	{
+	background-color:DeepPink;
+	}
+
+   table#SkillTableJQuery
+	{
+	color:Purple; 
+	background-color:LightBlue;
+	text-align:center;
+	}
+
+.navigation_bars
+{
+
+	height: 40px;
+	margin-top:0px;
+	background: #424242;
+        
+}
+
+.navigation_bars > li
+{
+	display: inline-block;
+	margin-right:20px;
+	margin-top:0px;
+	height:33px;	
+}
+
+.navigation_bars > li > a
+{
+	display:block;
+	text-decoration:none;
+	color:white;
+	font-size:18px;
+	margin-right:10px;
+	margin-top:7px;
+}
+
+.navigation_bars > li > a:hover
+{
+
+	text-decoration:underline;
+}
+ 
+ #arrow
+ {
+ 	width:15px;
+ 	height:10px;
+ 	position: absolute;
+ 	margin-top:-27px;
+	
+ }
+ 
+

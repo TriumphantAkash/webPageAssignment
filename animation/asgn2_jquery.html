@@ -1,0 +1,218 @@
+   <!DOCTYPE html>
+   <html>
+   <head>
+  	<meta charset ="UTF-8">
+   	<title> jquery </title>
+
+	<link rel="stylesheet" href="custom_animation.css" type="text/css">
+   </head>
+			
+     <body>
+
+	<!-- <div> <h1>Akash Chaturvedi</h1> </div>
+ -->
+<!-- 	<ul class = "navigation_bars">
+			<li><a href = "index.html">Resume</a></li>
+			<li><a href = "assgn2_ans2_table.html">Skills</a></li>
+			<li style = "font-weight:bold"><a href = "asgn2_jquery.html">Fun</a></li>
+			<li><a href = "onlineshopping.html">Shopping Cart</a></li>
+	</ul> -->
+<!-- 
+	<img id="arrow" src="arrow.png" style = "margin-left:220px;"/> -->
+     	<h1> Let's see some cool stuff! </h1>
+	  <div id=assgn2>
+
+	    <ol type="1">
+	  	  <li>
+			How are you feeling today?
+ 	  	 	<button id="buttonToggle" class="btn btn-default">Crazy/Happy? (Click here)</button>
+   	        	<p class="feelingToggle">Feeling crazy!</p>
+
+   	   	 	<p class="feelingToggle" style="display: none">Feeling happy!</p>
+	   	  </li>
+
+		  <li>
+			<br>
+			<img src="batman.jpg" id="ShowHideBatman" width="400" height="200">
+			<p>Dont like Batman? (Click the below buttons to show or hide me!) </p>
+   			<button id="hideButton" class="btn btn-default">Hide!</button>
+  	       	        <button id="showButton" class="btn btn-default">Show!</button>
+			<p> </p>
+		  </li>
+
+		<li>
+
+		 	<p id="TextFade"> <b> I know a secret about you! </b> <br>
+			 Dont want to tell the world? (Double click on me!)
+   		        </p>
+			<p> </p>
+		    
+		 </li>
+
+ 		<li> 
+    		        <p id="ColorFadeEffect"> Have a nice Day!!  </p>
+			<p align="center"> Is the color too bright? (Double click on the above text to see the effect.)   </p>
+			<p> </p>
+		 </li>
+
+
+		<li>
+
+    			<span id="BoxFade">How many boxes do you see? (Double click on me!) </span>
+			<div id="fadebox"> </div>
+		        <div id="fadebox" style="display:none;"> </div>
+			<p> </p>
+		</li>
+
+
+		<li>
+			Place your cursor in and out of the box to see the result
+			<div id="MouseScrollEvent"></div>
+			<p> </p>
+		</li>
+
+
+
+		<li>
+			<p align="center">
+		 	<button class="TextShowToggle btn btn-default">Double Click me!</button> </p>
+    			<p class="TextHideFade">Do visit this site again!</p>
+			<p> </p>
+		</li>
+
+	
+
+		<li>
+			Enter your favorite color : 
+   		        <input id="TextBoxEffect1" type="text" size="20"/>
+   		        <div id="box1" style="display:none;"> 
+			This is mine </div>
+                        <p> </p>
+			
+
+		</li>
+
+
+		<li>
+			 Enter your favorite sports star's name and click outside the box :
+   		         <input type="text" id="TextBlurEffect" value="" size="30">
+			<p> </p>
+
+		 </li>
+
+
+		<li>    
+			Want to see some animation? <br/>
+			Type something into the textbox :
+    			
+   			<input id="TextBoxAnimation" type="text" size="20"/>
+			<div id="boxeffect"> </div>	
+			<p> </p>
+
+		 </li>
+
+	 
+
+		<li>
+    			What is your favorite weather? (click outside the box after entering)
+    			<input type="text" id="TextChange" value="Winter">
+			<p> </p>
+		</li>
+
+
+		<li>
+ 			Click on the textbox below : <br/>
+   			<input type="text" id="DefaultValueText" value="" size="40">
+		</li>
+	</ol>
+
+	</div>
+
+
+   <script src="http://code.jquery.com/jquery.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+     <script>
+
+        jQuery(document).ready(function () {
+        jQuery("[id=buttonToggle]").click(function () {
+            jQuery(".feelingToggle").toggle("slow");
+        });
+
+        jQuery("#hideButton").click(function () {
+            jQuery("[id=ShowHideBatman]").hide();
+        });
+
+	 jQuery("#BoxFade").dblclick(function () {
+            jQuery("div:hidden:first").fadeIn("slow");
+        });
+
+        jQuery("#TextFade").dblclick(function () {
+            jQuery("#TextFade").fadeOut("slow");
+        });
+
+        jQuery("#ColorFadeEffect").dblclick(function () {
+            jQuery(this).fadeTo("slow", 0.25);
+        });
+
+        jQuery("#showButton").click(function () {
+            jQuery("#ShowHideBatman").show();
+        });
+
+
+        jQuery(".TextShowToggle").dblclick(function () {
+            jQuery(".TextHideFade").fadeToggle("slow", "linear");
+        });
+
+        jQuery("#MouseScrollEvent").mouseenter(function () {
+            jQuery("#MouseScrollEvent").animate({opacity: .3});
+        });
+
+        jQuery("#MouseScrollEvent").mouseleave(function () {
+            jQuery("#MouseScrollEvent").animate({opacity: 1}, function () {
+                alert("Callback function to set opacity to normal.");
+            });
+        });
+
+        jQuery("#TextBoxEffect1").keypress(function (e) {
+            jQuery("#box1").fadeIn("slow");
+            jQuery("#box1").fadeOut("slow");
+            jQuery("#box1").fadeIn(3000);
+        });
+
+        jQuery("#TextBoxAnimation").keydown(function (e) {
+            jQuery("#boxeffect").fadeIn("slow");
+            jQuery("#boxeffect").animate({height: 100}, "slow");
+            jQuery("#boxeffect").animate({width: 150}, "slow");
+            jQuery("#boxeffect").animate({height: 50}, "slow");
+            jQuery("#boxeffect").animate({height: 300}, "slow");
+            jQuery("#boxeffect").animate({height: 50}, "slow");
+        });
+
+
+        jQuery("#TextChange").change(function(e){
+            alert("Your favorite weather is : " + $("#TextChange").val());
+        });
+
+        jQuery("#TextBoxAnimation").keyup(function (e) {
+            jQuery("#boxeffect").stop();
+        });
+
+        jQuery("#TextBlurEffect").blur(function(){
+            alert("Your favorite sport's star is : " + $("#TextBlurEffect").val());
+        });
+
+
+        jQuery("#DefaultValueText").focus(function(e){
+            jQuery("#DefaultValueText").attr("value","Thanks for visiting my site! See you back soon...");
+        })
+        jQuery(":text").addClass(input - xlarge);
+    });
+
+</script>
+
+  </body>
+  </html>
+
+	 
+
+				

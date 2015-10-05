@@ -1,0 +1,148 @@
+
+<html>
+
+<head>
+
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+	
+<link rel="stylesheet" type="text/css" href="geek.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="jquery-1.3.2.js"></script>
+<script type="text/javascript" src="jquery.livequery.js"></script>
+
+
+<script language="javascript">
+
+        function addRow() {
+            var myRow = '<tr><td class="cols" contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td><input type="button" onclick="deleteEntireRow(this)" name="delete_row" value="Delete Row" /></td></tr>';
+            $("#dataTable").append(myRow);
+        }
+
+
+        function addRow1(tableID) {
+ 
+            var table = document.getElementById(tableID);
+ 
+            var rowCount = table.rows.length;
+            var row = table.insertRow(rowCount);
+ 
+            var cell1 = row.insertCell(0);
+            var element1 = document.createElement("input");
+            element1.type = "text";
+            element1.name="chkbox[]";
+            cell1.appendChild(element1);
+ 
+            var cell2 = row.insertCell(1);
+            //cell2.innerHTML = rowCount + 1;
+             var element3=document.createElement("input");
+			 //element3.type="text";
+			 element3.name="txtbox1[]";
+			 cell2.appendChild(element3);
+			 
+            var cell3 = row.insertCell(2);
+            var element2 = document.createElement("input");
+            element2.type = "td";
+            element2.name = "txtbox[]";
+            cell3.appendChild(element2);
+ 
+            var cell4 = row.insertCell(3);
+            var element4 = document.createElement("input");
+            element4.type = "text";
+            element4.name = "txtbox2[]";
+            cell4.appendChild(element4);
+			
+			var cell5 = row.insertCell(4);
+            var element5 = document.createElement("input");
+            element5.type = "button";
+            element5.value = "Delete Row";
+			element5.setAttribute("onclick", "deleteEntireRow(this)");
+            cell5.appendChild(element5);
+ 
+        }
+		
+		function deleteEntireRow(t){
+	console.log(t);
+		var row = t.parentNode.parentNode;
+		document.getElementById("dataTable").deleteRow(row.rowIndex);
+		console.log(row);
+	}
+	
+	
+	$(document).ready(function(){
+
+	var altkey=false;
+	var mouseoverrow=false;
+
+
+	$(document).on("mouseover","td",function(event){
+		mouseoverrow = true;
+		if (event.altKey) {
+        		$(this).css("background-color", "blue");
+	  		$(this).css("color", "red");
+			altkey = true;
+		} else {
+        
+         		$(this).css("background-color", "white");
+	    		$(this).css("color", "black");
+			altkey = false;
+
+    		}
+	});
+
+	$(document).on("mouseleave","td",function(e){
+   		$(this).css("background-color", "white");
+		$(this).css("color", "black");
+		
+		mouseoverrow =  false;
+
+	});
+
+	$(document).on("keyup",function(event) {
+    			
+			$("td").css("background-color", "white");
+			$("td").css("color", "black");
+			altkey=false;
+
+    		
+	});
+
+});
+		
+	
+	</script>
+	</head>
+	
+	
+	
+	
+	<body>
+	
+	
+	
+	
+	<input type="button"  text-align="center" value="Add Row" onclick="addRow()" />
+ 
+   
+ 
+    <table id="dataTable" width="350px" border="1">
+	
+	<tr>
+	<th>First Name</th>
+	<th>Last Name</th>
+	<th>Email Address</th>
+	<th>Phone Number</th>
+	</tr>
+      	  <tr>
+            <td>Akash</td>
+            <td>Chaturvedi </td>
+            <td> axc144430@utdallas.edu </td>
+			<td> 4697746884 </td>
+			<td> <input type="button" id="this" value="Delete Row" onclick= "deleteEntireRow(this)"/>
+        </tr>
+    </table>
+
+</body>
+
+</html>

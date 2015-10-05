@@ -26,12 +26,6 @@ header, footer, section, article {
     background-color: white;
 }
 
-header, footer {
-    color: white;
-    background-color: rgb(192, 192, 192);
-    margin-bottom: 5px;
-}
-
 section {
     background-color: #ddd;
 }
@@ -47,6 +41,7 @@ nav ul li {
 }
 
 footer {
+	color: white;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -64,6 +59,7 @@ tabHeading {
 }
 
 header {
+	color: white;
     background-color: rgb(210, 105, 30);
     background-image: url("utd.jpg");
     background-repeat: no-repeat;

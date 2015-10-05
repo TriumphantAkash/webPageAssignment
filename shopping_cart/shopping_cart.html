@@ -1,0 +1,259 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Shopping cart</title>
+	<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/icon.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
+	<style type="text/css">
+		.store{
+			list-style:none;
+			margin-right:300px;
+			padding:0px;
+			height:100%;
+		}
+		.store li{
+			display:inline;
+			float:left;
+			margin:10px;
+		}
+		.item{
+			display:block;
+			text-decoration:none;
+		}
+		.item img{
+			border:1px solid #333;
+		}
+		.item p{
+			margin:0;
+			font-weight:bold;
+			text-align:center;
+			color:#09A407;
+		}
+		.shopping_cart{
+			position:fixed;
+			right:0;
+			top:0;
+			width:300px;
+			height:100%;
+			background:#EB9100;
+			padding:0px 10px;
+		}
+		h1{
+			text-align:center;
+			color:#fff;
+		}
+		h2{
+			position:absolute;
+			font-size:16px;
+			left:10px;
+			bottom:50px;
+			color:#fff;
+		}
+		.total{
+			margin:0;
+			text-align:right;
+			padding-right:20px;
+		}
+		button{
+			position:absolute;
+			font-size:16px;
+			left:10px;
+			bottom:20px;
+		}
+	</style>
+	<script>
+		var val = {"total":0,"rows":[]};
+		var final_price = 0;
+		
+		$(function(){
+			$('#table_data').datagrid({
+				singleSelect:true
+			});
+			$('.item').draggable({
+				revert:true,
+				proxy:'clone',
+				onStartDrag:function(){
+					$(this).draggable('options').cursor = 'not-allowed';
+					$(this).draggable('proxy').css('z-index',10);
+				},
+				onStopDrag:function(){
+					$(this).draggable('options').cursor='move';
+				}
+			});
+			$('.shopping_cart').droppable({
+				onDragEnter:function(e,source){
+					$(source).draggable('options').cursor='auto';
+				},
+				onDragLeave:function(e,source){
+					$(source).draggable('options').cursor='not-allowed';
+				},
+				onDrop:function(e,source){
+					var name = $(source).find('p:eq(0)').html();
+					var price = $(source).find('p:eq(1)').html();
+					addProduct(name, parseFloat(price.split('$')[1]));
+				}
+			});
+		});
+		
+		function addProduct(name,price){
+			function add(){
+				for(var i=0; i<val.total; i++){
+					var row = val.rows[i];
+					if (row.name == name){
+						row.quantity += 1;
+						return;
+					}
+				}
+				val.total += 1;
+				val.rows.push({
+					name:name,
+					quantity:1,
+					price:price
+				});
+			}
+			add();
+			final_price += price;
+			$('#table_data').datagrid('loadData', val);
+			$('div.shopping_cart .total').html('Total: $'+final_price);
+		}
+
+		function payAmount()
+		{
+			alert('Amount debited from your account');
+			// var lis = root.getElementsById("shopping_list");
+
+			// for(var i = 0, il = lis.length;i<il;i++) {
+   //  		root.removeChild(lis[i]);
+			// }
+			// var elem = document.getElementById('table_data');
+			// elem.parentNode.removeChild(elem);
+			
+		}
+	</script>
+</head>
+<body style="margin:0;padding:0;height:100%;background:#fafafa;">
+	<ul id="shopping_list" class="store">
+		<li>
+			<a href="#" class="item">
+				<img src="high_performance_computing.png" width="120px" height="150px"/>
+				<div>
+					<p>High Performance<br> Computing</p>
+					<p>Price:$65</p>
+				</div>
+			</a>
+		</li>
+
+		<li>
+			<a href="#" class="item">
+				<img src="algorithm.png" width="120px" height="150px"/>
+				<div>
+					<p>Algorithm <br> Analysis</p>
+					<p>Price:$30</p>
+				</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="#" class="item">
+				<img src="coding_interview.png" width="120px" height="150px"/>
+				<div>
+					<p>Cracking the<br> Coding Interview</p>
+					<p>Price:$15</p>
+				</div>
+			</a>
+		</li>
+
+		<li>
+			<a href="#" class="item">
+				<img src="computer_organization_design.png" width="120px" height="150px"/>
+				<div>
+					<p>Computer<br> Architecture</p>
+					<p>Price:$20</p>
+				</div>
+			</a>
+		</li>
+
+		<li>
+			<a href="#" class="item">
+				<img src="data_structures.png" width="120px" height="150px"/>
+				<div>
+					<p>Data Structures <br>and Algorithms</p>
+					<p>Price:$30</p>
+				</div>
+			</a>
+		</li>
+
+		<li>
+			<a href="#" class="item">
+				<img src="html_css.png" width="120px" height="150px"/>
+				<div>
+					<p>HTML and CSS <br> crash course</p>
+					<p>Price:$30</p>
+				</div>
+			</a>
+		</li>
+
+		<li>
+			<a href="#" class="item">
+				<img src="android.jpg" width="120px" height="150px"/>
+				<div>
+					<p>Android Application<br>Development</p>
+					<p>Price:$30</p>
+				</div>
+			</a>
+		</li>
+
+		<li>
+			<a href="#" class="item">
+				<img src="head_first_java.png" width="120px" height="150px"/>
+				<div>
+					<p>Java</p>
+					<p>Price:$30</p>
+				</div>
+			</a>
+		</li>
+
+				<li>
+			<a href="#" class="item">
+				<img src="python.png" width="120px" height="150px"/>
+				<div>
+					<p>Python</p>
+					<p>Price:$30</p>
+				</div>
+			</a>
+		</li>
+
+		</li>
+
+		<li>
+			<a href="#" class="item">
+				<img src="security_engineering.png" width="120px" height="150px"/>
+				<div>
+					<p>Security Engineering</p>
+					<p>Price:$30</p>
+				</div>
+			</a>
+		</li>
+
+	</ul>
+	<div class="shopping_cart">
+		<h1>UTD BOOK STORE</h1>
+		<div style="background:#fff">
+		<table id="table_data" fitColumns="true" style="width:300px;height:auto;">
+			<thead>
+				<tr>
+					<th field="name" width=100>Item</th>
+					<th field="quantity" width=50 align="right">Quantity</th>
+					<th field="price" width=50 align="right">Price</th>
+				</tr>
+			</thead>
+		</table>
+		</div>
+		<p class="total">Total:0</p>
+		<button onclick="payAmount()" >Pay this amount</button>
+		<h2 style:center >Add Your Items Here</h2>
+	</div>
+</body>
+</html>

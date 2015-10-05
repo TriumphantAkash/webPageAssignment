@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN“ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- StyleSheet -->
+        <link rel="stylesheet" type="text/css" href="canvas.css">
+        <!-- Script File -->
+        <script src="js/firstscript.js"></script>
+    
+      </head>
+
+
+
+    <body >
+
+      <p>Using HTML 5 canvas to render and manipulate canvas </br>objects like text, rectangle and more.</p>
+      </br>
+      </br>
+      </br>
+      </br>
+
+        <canvas id="myCanvas" width="650" height="250" >
+        Your browser does not support the HTML5 canvas tag.
+        </canvas>
+
+        <script>
+
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        //dashed rectangle 333/////////////
+        ctx.setLineDash([6]);
+        ctx.strokeRect(20,105 , 35, 15);
+        ctx.setLineDash([]);
+        ctx.font = "20px";
+        ctx.fillText("3 3 3", 27 , 115);
+        ctx.save();                         // save the state
+
+        //Top box///////////////////////////////  
+
+        ctx.strokeRect(100,10 , 500, 93);
+        ctx.translate(100, 10);             //change the origin to box1 rectangle
+        ctx.fillText("HTML 1", 15 , 25);    //draw text html1
+
+        
+              
+        ctx.strokeRect(100, 30, 300, 45);   //first make border
+        ctx.fillStyle = "#FFFF00";        //then make rectangle
+        ctx.fillRect(100, 30, 300, 45);
+        ctx.fillStyle = "#000000";        //text 22
+        ctx.fillText("2 2", 120, 54); 
+
+
+        ctx.moveTo(120, 56);               //line for 22
+        ctx.lineTo(134, 56);
+        ctx.stroke();                     
+
+        ctx.restore();
+
+
+
+        //bottom box//////////////////////////////
+        ctx.strokeRect(100,125 , 500, 115);
+        ctx.translate(100, 125); 
+        ctx.strokeRect(15, 15, 270, 45);   //first make border
+        ctx.fillStyle = "#FFFF00";        //then make rectangle
+        ctx.fillRect(15, 15, 270, 45);
+        ctx.fillStyle = "#000000";        //text 4444
+        ctx.fillText("4 4 4 4", 30, 39);
+
+
+        
+        ctx.strokeRect(285, 15, 115, 45);
+        ctx.fillText("5 5 5 5 5", 285, 39);
+
+
+        ctx.strokeRect(80, 60, 320, 45);
+        ctx.fillText("6 6 6 6 6 6", 90, 85);
+        ctx.restore();
+
+
+        </script>     
+
+
+    </body>
+
+</html>
